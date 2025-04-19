@@ -51,10 +51,10 @@ namespace TP3_Grupo10
             }
             else
             {
-                    txtContraseña.Attributes.Add("value", Request.Form[txtContraseña.UniqueID]);
-                    txtRepetirContraseña.Attributes.Add("value", Request.Form[txtRepetirContraseña.UniqueID]);
-                    return;
-                
+                txtContraseña.Attributes.Add("value", txtContraseña.Text);
+                txtRepetirContraseña.Attributes.Add("value", txtRepetirContraseña.Text);
+                return;
+
             }
         }
     }

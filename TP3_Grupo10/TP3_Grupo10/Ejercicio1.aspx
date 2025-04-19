@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" EnableViewState="true">
         <div>
             <table class="auto-style1">
                 <tr>
@@ -99,7 +99,6 @@
                     <td>
                         <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Complete el campo &quot;Contraseña&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="revContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, un número y un carácter especial (@$!%*?&amp;)." ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{8,}$&quot;" ValidationGroup="grupoUsuarios">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
