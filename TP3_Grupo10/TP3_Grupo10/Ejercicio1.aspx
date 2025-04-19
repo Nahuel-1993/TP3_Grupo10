@@ -27,6 +27,17 @@
         .auto-style6 {
             height: 23px;
         }
+        .auto-style7 {
+            width: 247px;
+            height: 8px;
+        }
+        .auto-style8 {
+            width: 41px;
+            height: 8px;
+        }
+        .auto-style9 {
+            height: 8px;
+        }
     </style>
 </head>
 <body>
@@ -99,6 +110,7 @@
                     <td>
                         <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Complete el campo &quot;Contraseña&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, un número y un carácter especial (@$!%*?&amp;)." ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{8,}$&quot;" ValidationGroup="grupoUsuarios">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -107,7 +119,7 @@
                     <td>
                         <asp:TextBox ID="txtRepetirContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvRepetirContraseña" runat="server" ControlToValidate="txtRepetirContraseña" ErrorMessage="Complete el campo &quot;Repetir contraseña&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
-                        <asp:CompareValidator ID="CompareV_Contraseña" runat="server" ControlToCompare="txtRepetirContraseña" ControlToValidate="txtContraseña" Display="None" ErrorMessage="Las contraseñas ingresadas no coinciden." ValidationGroup="grupoUsuarios"></asp:CompareValidator>
+                        <asp:CompareValidator ID="CompareV_Contraseña" runat="server" ControlToCompare="txtRepetirContraseña" ControlToValidate="txtContraseña" ErrorMessage="Los Campos de &quot;Contraseña&quot; y &quot;Repertir Contraseña&quot; no coinciden." ValidationGroup="grupoUsuarios">*</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -123,7 +135,7 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td>
                         <asp:TextBox ID="txtCodigoPostal" runat="server" ValidationGroup="grupoUsuarios"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCodigoPostal" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCodigoPostal" ValidationGroup="grupoUsuarios" ErrorMessage="Complete el campo &quot;CP&quot;">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -154,10 +166,11 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>
+                    <td class="auto-style7"></td>
+                    <td class="auto-style8"></td>
+                    <td class="auto-style9">
                         <asp:ValidationSummary ID="ValSummary_Usuarios" runat="server" ValidationGroup="grupoUsuarios" />
+                        <br />
                     </td>
                 </tr>
                 <tr>
