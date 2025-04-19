@@ -42,5 +42,19 @@ namespace TP3_Grupo10
                 txtNombreLocalidad.Text = ""; // Limpiar el textbox
             }
         }
+
+        protected void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                //Aca iria la parte del Label de bienvenida el cual no correspondia a mi parte
+            }
+            else
+            {
+                txtContraseña.Attributes.Add("value", Request.Form[txtContraseña.UniqueID]);
+                txtRepetirContraseña.Attributes.Add("value", Request.Form[txtRepetirContraseña.UniqueID]);
+                return;
+            }
+        }
     }
 }

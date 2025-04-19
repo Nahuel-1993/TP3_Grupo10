@@ -107,6 +107,7 @@
                     <td>
                         <asp:TextBox ID="txtRepetirContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvRepetirContraseña" runat="server" ControlToValidate="txtRepetirContraseña" ErrorMessage="Complete el campo &quot;Repetir contraseña&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CompareV_Contraseña" runat="server" ControlToCompare="txtRepetirContraseña" ControlToValidate="txtContraseña" Display="None" ErrorMessage="Las contraseñas ingresadas no coinciden." ValidationGroup="grupoUsuarios"></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -144,13 +145,20 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
                     <td>
-                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" ValidationGroup="grupoUsuarios" />
+                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" ValidationGroup="grupoUsuarios" OnClick="btnGuardarUsuario_Click" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
                     <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>
+                        <asp:ValidationSummary ID="ValSummary_Usuarios" runat="server" ValidationGroup="grupoUsuarios" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
