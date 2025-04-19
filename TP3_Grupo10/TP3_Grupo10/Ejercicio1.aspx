@@ -169,7 +169,7 @@
                     <td class="auto-style7"></td>
                     <td class="auto-style8"></td>
                     <td class="auto-style9">
-                        <asp:ValidationSummary ID="ValSummary_Usuarios" runat="server" ValidationGroup="grupoUsuarios" />
+                        <asp:ValidationSummary ID="ValSummary_Usuarios" runat="server" ValidationGroup="grupoUsuarios" ShowMessageBox="True" ShowSummary="False" />
                         <br />
                     </td>
                 </tr>
