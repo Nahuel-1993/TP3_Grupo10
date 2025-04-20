@@ -57,11 +57,15 @@ namespace TP3_Grupo10
 
         protected void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
-                
+
             if (Page.IsValid)
             {
-                //Aca iria la parte del Label de bienvenida el cual no correspondia a mi parte
-                
+   
+                string nombreUsuario = txtNombreUsuario.Text.Trim();
+
+
+                lblBienvenidaUser.Text = $"¡Bienvenida, {nombreUsuario}! 🙌";
+
             }
             else
             {

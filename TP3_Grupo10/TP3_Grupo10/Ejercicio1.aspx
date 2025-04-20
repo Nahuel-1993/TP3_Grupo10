@@ -211,7 +211,8 @@
                         <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" ValidationGroup="grupoUsuarios" OnClick="btnGuardarUsuario_Click" />
                     </td>
                     <td>
-                        &nbsp;</td>
+                        <asp:Label ID="lblBienvenidaUser" runat="server"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
