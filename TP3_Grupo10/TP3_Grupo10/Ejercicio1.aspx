@@ -150,6 +150,7 @@
                     <td class="auto-style10">
                         <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Complete el campo &quot;Contraseña&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="re_Contraseña" runat="server" ControlToValidate="txtContraseña" Display="None" ErrorMessage="La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial." ValidationExpression="^(?=.{8,})(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&amp;*()_+=\[\]{};':&quot;\\|,.&lt;&gt;/?~-]).*$" ValidationGroup="grupoUsuarios">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
                         &nbsp;</td>

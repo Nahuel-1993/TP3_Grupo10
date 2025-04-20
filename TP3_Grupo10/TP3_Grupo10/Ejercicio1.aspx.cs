@@ -51,6 +51,7 @@ namespace TP3_Grupo10
             }
             else
             {
+                Page.Validate("ValidarContraseña");
                 txtContraseña.Attributes.Add("value", txtContraseña.Text);
                 txtRepetirContraseña.Attributes.Add("value", txtRepetirContraseña.Text);
                 return;
