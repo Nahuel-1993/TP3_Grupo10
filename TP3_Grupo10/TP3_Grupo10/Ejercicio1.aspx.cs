@@ -9,8 +9,8 @@ namespace TP3_Grupo10
 {
     public partial class Ejercicio1 : System.Web.UI.Page
     {
-        string Contraseña;
-        string RepContraseña;
+        string Contraseña = "";
+        string RepContraseña = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
@@ -40,15 +40,19 @@ namespace TP3_Grupo10
 
             if (Page.IsValid) // Solo si pasó el CustomValidator
             {
+
+                //restaurarContraseña();
+
                 string nuevaLocalidad = txtNombreLocalidad.Text.Trim();
                 ddlLocalidades.Items.Add(new ListItem(nuevaLocalidad));
                 txtNombreLocalidad.Text = ""; // Limpiar el textbox
             }
             else
             {
-                restaurarContraseña();
-
+                //restaurarContraseña();
             }
+
+            restaurarContraseña();
         }
 
         protected void btnGuardarUsuario_Click(object sender, EventArgs e)
