@@ -102,7 +102,9 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style13">&nbsp;</td>
                     <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:RegularExpressionValidator ID="revNombreLocalidad" runat="server" ControlToValidate="txtNombreLocalidad" ValidationExpression="^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s]+$" ValidationGroup="grupoLocalidades">* Solo se permiten letras, números, y espacios</asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
