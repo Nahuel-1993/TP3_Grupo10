@@ -9,6 +9,8 @@ namespace TP3_Grupo10
 {
     public partial class Ejercicio1 : System.Web.UI.Page
     {
+        string Contraseña;
+        string RepContraseña;
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
@@ -35,28 +37,43 @@ namespace TP3_Grupo10
 
         protected void btnGuardarLocalidad_Click(object sender, EventArgs e)
         {
+
             if (Page.IsValid) // Solo si pasó el CustomValidator
             {
                 string nuevaLocalidad = txtNombreLocalidad.Text.Trim();
                 ddlLocalidades.Items.Add(new ListItem(nuevaLocalidad));
                 txtNombreLocalidad.Text = ""; // Limpiar el textbox
             }
+            else
+            {
+                restaurarContraseña();
+
+            }
         }
 
         protected void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
+                
             if (Page.IsValid)
             {
                 //Aca iria la parte del Label de bienvenida el cual no correspondia a mi parte
+                
             }
             else
             {
-                Page.Validate("ValidarContraseña");
-                txtContraseña.Attributes.Add("value", txtContraseña.Text);
-                txtRepetirContraseña.Attributes.Add("value", txtRepetirContraseña.Text);
-                return;
+                restaurarContraseña();
 
             }
+
+        }
+
+        protected void restaurarContraseña()
+        {
+
+            Contraseña = txtContraseña.Text;
+            RepContraseña = txtRepetirContraseña.Text;
+            txtContraseña.Attributes["value"] = Contraseña;
+            txtRepetirContraseña.Attributes["value"] = RepContraseña;
         }
     }
 }
