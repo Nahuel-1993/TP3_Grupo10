@@ -148,7 +148,7 @@
                     <td class="auto-style3">Contraseña:</td>
                     <td class="auto-style13">&nbsp;</td>
                     <td class="auto-style10">
-                        <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios" ViewStateMode="Disabled"></asp:TextBox>
+                        <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Complete el campo &quot;Contraseña&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
                     </td>
                     <td>
