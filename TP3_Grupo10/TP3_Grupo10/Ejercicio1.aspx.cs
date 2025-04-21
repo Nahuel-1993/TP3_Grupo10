@@ -40,16 +40,13 @@ namespace TP3_Grupo10
 
             if (Page.IsValid) // Solo si pasó el CustomValidator
             {
-
-                //restaurarContraseña();
-
                 string nuevaLocalidad = txtNombreLocalidad.Text.Trim();
                 ddlLocalidades.Items.Add(new ListItem(nuevaLocalidad));
                 txtNombreLocalidad.Text = ""; // Limpiar el textbox
             }
             else
             {
-                //restaurarContraseña();
+
             }
 
             restaurarContraseña();
