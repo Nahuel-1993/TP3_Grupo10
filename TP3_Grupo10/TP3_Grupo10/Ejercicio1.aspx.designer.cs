@@ -42,6 +42,15 @@ namespace TP3_Grupo10
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreLocalidad;
 
         /// <summary>
+        /// Control revNombreLocalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombreLocalidad;
+
+        /// <summary>
         /// Control btnGuardarLocalidad.
         /// </summary>
         /// <remarks>
@@ -150,6 +159,15 @@ namespace TP3_Grupo10
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCorreoElectronico;
 
         /// <summary>
+        /// Control revCorreoElectronico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCorreoElectronico;
+
+        /// <summary>
         /// Control txtCodigoPostal.
         /// </summary>
         /// <remarks>
@@ -166,6 +184,15 @@ namespace TP3_Grupo10
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCP;
+
+        /// <summary>
+        /// Control revCodigoPostal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCodigoPostal;
 
         /// <summary>
         /// Control ddlLocalidades.

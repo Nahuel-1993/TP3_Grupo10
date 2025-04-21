@@ -102,7 +102,9 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style13">&nbsp;</td>
                     <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:RegularExpressionValidator ID="revNombreLocalidad" runat="server" ControlToValidate="txtNombreLocalidad" ValidationExpression="^(?!\.)(?!.*\.\.)[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s.]+$" ValidationGroup="grupoLocalidades">* Solo se permiten letras, números, puntos, y espacios de nombres bien formulados</asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
@@ -172,6 +174,7 @@
                     <td class="auto-style10">
                         <asp:TextBox ID="txtCorreoElectronico" runat="server" ValidationGroup="grupoUsuarios"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvCorreoElectronico" runat="server" ControlToValidate="txtCorreoElectronico" ErrorMessage="Complete el campo &quot;Correo electronico&quot;" ValidationGroup="grupoUsuarios">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCorreoElectronico" runat="server" ControlToValidate="txtCorreoElectronico" ErrorMessage="Formato de correo electrónico no válido" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$" ValidationGroup="grupoUsuarios">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
                         &nbsp;</td>
@@ -181,7 +184,8 @@
                     <td class="auto-style13">&nbsp;</td>
                     <td class="auto-style10">
                         <asp:TextBox ID="txtCodigoPostal" runat="server" ValidationGroup="grupoUsuarios"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCodigoPostal" ValidationGroup="grupoUsuarios" ErrorMessage="Complete el campo &quot;CP&quot;">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCodigoPostal" ValidationGroup="grupoUsuarios" ErrorMessage="Complete el campo &quot;CP&quot; (Código Postal)">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCodigoPostal" runat="server" ControlToValidate="txtCodigoPostal" ErrorMessage="El código postal debe ser igual a exactamente cuatro números" ValidationExpression="^\d{4}$" ValidationGroup="grupoUsuarios">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
                         &nbsp;</td>
