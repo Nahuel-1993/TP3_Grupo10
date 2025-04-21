@@ -80,5 +80,10 @@ namespace TP3_Grupo10
             txtContraseña.Attributes["value"] = Contraseña;
             txtRepetirContraseña.Attributes["value"] = RepContraseña;
         }
+
+        protected void btnInicio_Click(object sender, EventArgs e)
+        {
+                Response.Redirect("~/inicio.aspx");
+        }
     }
 }
